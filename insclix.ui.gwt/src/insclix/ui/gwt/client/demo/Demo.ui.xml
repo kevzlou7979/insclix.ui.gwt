@@ -1,14 +1,70 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:p='urn:import:com.vaadin.polymer.paper.widget'
 	xmlns:i="urn:import:insclix.ui.gwt.client">
 	<ui:style>
-	
+	.container paper-button.colored {
+	   background: #4285f4;
+	   color: #fff;
+	 }
 	</ui:style>
 	<g:HTMLPanel>
+		
+		<!-- GWT MATERIAL -->
 		<i:TextBox ui:field="txtSample" />
 		<i:Button ui:field="btnTest" text="Get Name" waves="Test" backgroundColor="red"/>
 		<i:Autocomplete ui:field="autocomplete" placeholder="Names"/>
 		<i:Badge text="Badge" backgroundColor="red"/>
+		
+		<!-- VAADIN POLYMER-->
+		<!-- PaperButton -->
+		<p:PaperButton toggles="true" raised="true" active="true" addStyleNames="{style.colored}">active</p:PaperButton>
+		
+		<!-- Paper drop down -->
+		<g:HTMLPanel addStyleNames="dropdown-menu-sample">
+			<div class="horizontal-section-container">
+	            <div>
+	                <div class="horizontal-section">
+	                    <p:PaperDropdownMenu label="Dinosaurs">
+	                        <p:PaperMenu ui:field="menu1" addStyleNames="dropdown-content"/>
+	                    </p:PaperDropdownMenu>
+	                </div>
+	            </div>
+	        </div>
+        </g:HTMLPanel>
+        
+        <!-- VAADIN POLYMER WITH MATERIAL CARD -->
+        <m:MaterialCard backgroundColor="white" grid="l3">
+			<m:MaterialCardImage waves="light">
+				<m:MaterialImage url="http://assets.materialup.com/uploads/b6992fb2-7bf4-401d-a233-e34a486b9337/gif.gif"/>
+			</m:MaterialCardImage>
+					            
+			<m:MaterialCardContent textColor="black">
+				<m:MaterialCardTitle text="Sample" icon="more_vert" iconPosition="right" textColor="black"/>
+			</m:MaterialCardContent>
+							    
+			<m:MaterialCardReveal>
+				<m:MaterialCardTitle text="Sample" icon="close" iconPosition="right" textColor="black"/>
+				<m:MaterialLabel text="Here is some more information about this product that is only revealed once clicked on." />
+			</m:MaterialCardReveal>
+					    
+			<m:MaterialCardAction>
+				<p:PaperButton toggles="true" raised="true" active="true" addStyleNames="{style.colored}">active</p:PaperButton>
+			</m:MaterialCardAction>
+		</m:MaterialCard>
+		
+		<!-- POLYMER CHECKBOX vs MATERIAL CHECKBOX -->
+		<p:PaperCheckbox checked="true">Polymer</p:PaperCheckbox>
+		<m:MaterialCheckBox value="true" text="GWT Material"/>
+		
+		<!-- POLYMER MENU -->
+		<p:PaperMenu addStyleNames="list" multi="true">
+        	<p:PaperItem>Bold</p:PaperItem>
+            <p:PaperItem>Italic</p:PaperItem>
+            <p:PaperItem>Underline</p:PaperItem>
+            <p:PaperItem>Strikethrough</p:PaperItem>
+		</p:PaperMenu>
 	</g:HTMLPanel>
-</ui:UiBinder> 
+</ui:UiBinder>

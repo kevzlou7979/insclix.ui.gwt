@@ -13,6 +13,8 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import com.vaadin.polymer.paper.widget.PaperItem;
+import com.vaadin.polymer.paper.widget.PaperMenu;
 
 public class Demo extends Composite {
 
@@ -24,9 +26,22 @@ public class Demo extends Composite {
 	@UiField Button btnTest;
 	@UiField TextBox txtSample;
 	@UiField Autocomplete autocomplete;
+	
+	@UiField PaperMenu menu1;
+	
+	private static String[] letters = { "alpha", "beta", "gamma", "delta",
+    "epsilon" };
+	
 	public Demo() {
 		initWidget(uiBinder.createAndBindUi(this));
 		initAutocomplete();
+		initPolyMenu();
+	}
+
+	private void initPolyMenu() {
+		for (String letter : letters) {
+            menu1.add(new PaperItem(letter));
+        }
 	}
 
 	private void initAutocomplete() {
