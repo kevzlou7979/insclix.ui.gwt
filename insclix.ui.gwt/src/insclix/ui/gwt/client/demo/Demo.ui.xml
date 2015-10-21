@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:i="urn:import:insclix.ui.gwt.client">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<i:TextBox ui:field="txtSample" />
+		<i:Button ui:field="btnTest" text="Get Name" waves="Test" backgroundColor="red"/>
+		<i:Autocomplete ui:field="autocomplete" placeholder="Names"/>
+		<i:Badge text="Badge" backgroundColor="red"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 
