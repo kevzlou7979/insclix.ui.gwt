@@ -21,25 +21,20 @@ import com.google.gwt.event.dom.client.MouseOutHandler;
 import com.google.gwt.event.dom.client.MouseOverHandler;
 import com.google.gwt.event.dom.client.MouseUpHandler;
 import com.google.gwt.event.dom.client.MouseWheelHandler;
+import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HandlerRegistration;
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasText;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public class Button extends Composite implements HasAllMouseHandlers, HasClickHandlers, HasDoubleClickHandlers, HasHref, HasTooltip
-, HasGrid, HasActivates, HasColors, HasWaves, HasDisabled, HasText, HasIcons{
-
-	interface ButtonUiBinder extends UiBinder<Widget, Button> {
-	}
+public class Button implements HasAllMouseHandlers, HasClickHandlers, HasDoubleClickHandlers, HasHref, HasTooltip
+, HasGrid, HasActivates, HasColors, HasWaves, HasDisabled, HasText, HasIcons, IsWidget{
 
 	private MaterialButton button = null;
 	
-	@SuppressWarnings("deprecation")
 	public Button() {
 		button = new MaterialButton();
 		button.onLoad();
-		setWidget(button);
 	}
 
 	@Override
@@ -208,6 +203,18 @@ public class Button extends Composite implements HasAllMouseHandlers, HasClickHa
 	public HandlerRegistration addClickHandler(ClickHandler handler) {
 		// TODO Auto-generated method stub
 		return button.addClickHandler(handler);
+	}
+
+	@Override
+	public void fireEvent(GwtEvent<?> event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Widget asWidget() {
+		// TODO Auto-generated method stub
+		return button;
 	}
 
 }

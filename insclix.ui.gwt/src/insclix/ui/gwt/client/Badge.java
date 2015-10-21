@@ -3,22 +3,17 @@ package insclix.ui.gwt.client;
 import gwt.material.design.client.custom.HasColors;
 import gwt.material.design.client.ui.MaterialBadge;
 
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasText;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public class Badge extends Composite implements HasColors, HasText{
-
-	interface BadgeUiBinder extends UiBinder<Widget, Badge> {
-	}
+public class Badge implements HasColors, HasText, IsWidget{
 
 	private MaterialBadge badge;
 	
-	@SuppressWarnings("deprecation")
+	
 	public Badge() {
 		badge = new MaterialBadge();
-		setWidget(badge);
 	}
 
 	@Override
@@ -43,6 +38,12 @@ public class Badge extends Composite implements HasColors, HasText{
 	public void setTextColor(String textColor) {
 		// TODO Auto-generated method stub
 		badge.setTextColor(textColor);
+	}
+
+	@Override
+	public Widget asWidget() {
+		// TODO Auto-generated method stub
+		return badge;
 	}
 
 }

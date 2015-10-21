@@ -45,35 +45,29 @@ import com.google.gwt.event.dom.client.TouchEndHandler;
 import com.google.gwt.event.dom.client.TouchMoveHandler;
 import com.google.gwt.event.dom.client.TouchStartHandler;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
+import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.i18n.client.AutoDirectionHandler;
 import com.google.gwt.i18n.shared.DirectionEstimator;
 import com.google.gwt.i18n.shared.HasDirectionEstimator;
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasEnabled;
 import com.google.gwt.user.client.ui.HasName;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.HasValue;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public class TextBox extends Composite implements HasChangeHandlers, HasName, HasDirectionEstimator, HasValue<String>,
+public class TextBox  implements HasChangeHandlers, HasName, HasDirectionEstimator, HasValue<String>,
 HasText, AutoDirectionHandler.Target, IsEditor<ValueBoxEditor<String>>,
 HasKeyUpHandlers, HasClickHandlers, HasDoubleClickHandlers,
 HasEnabled, HasAllDragAndDropHandlers, HasAllFocusHandlers,
 HasAllGestureHandlers, HasAllKeyHandlers, HasAllMouseHandlers,
-HasAllTouchHandlers, HasGrid, HasError{
+HasAllTouchHandlers, HasGrid, HasError, IsWidget{
 
-	interface TextBoxUiBinder extends UiBinder<Widget, TextBox> {
-	}
-	
 	private MaterialTextBox textBox = null;
 
-	@SuppressWarnings("deprecation")
 	public TextBox() {
 		textBox = new MaterialTextBox();
-		
-		setWidget(textBox);
 		textBox.onAttach();
 	}
 
@@ -422,6 +416,18 @@ HasAllTouchHandlers, HasGrid, HasError{
 
 	public void setLength(String length) {
 		textBox.setLength(length);
+	}
+
+	@Override
+	public void fireEvent(GwtEvent<?> event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Widget asWidget() {
+		// TODO Auto-generated method stub
+		return textBox;
 	}
 
 }

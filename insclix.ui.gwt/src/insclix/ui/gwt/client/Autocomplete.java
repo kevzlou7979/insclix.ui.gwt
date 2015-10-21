@@ -1,29 +1,23 @@
 package insclix.ui.gwt.client;
 
-import java.util.List;
-
 import gwt.material.design.client.custom.HasError;
 import gwt.material.design.client.custom.HasGrid;
 import gwt.material.design.client.custom.MaterialSuggestionOracle;
 import gwt.material.design.client.ui.ListItem;
 import gwt.material.design.client.ui.MaterialAutoComplete;
 
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Composite;
+import java.util.List;
+
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.MultiWordSuggestOracle;
 import com.google.gwt.user.client.ui.Widget;
 
-public class Autocomplete extends Composite implements HasError,  HasGrid{
-
-	interface AutocompleteUiBinder extends UiBinder<Widget, Autocomplete> {
-	}
+public class Autocomplete implements HasError,  HasGrid, IsWidget{
 
 	private MaterialAutoComplete autocomplete;
 	
-	@SuppressWarnings("deprecation")
 	public Autocomplete() {
 		autocomplete = new MaterialAutoComplete();
-		setWidget(autocomplete);
 	}
 
 	@Override
@@ -92,6 +86,11 @@ public class Autocomplete extends Composite implements HasError,  HasGrid{
 
 	public void setDisabled(boolean disabled) {
 		autocomplete.setDisabled(disabled);
+	}
+
+	@Override
+	public Widget asWidget() {
+		return autocomplete;
 	}
 
 	
