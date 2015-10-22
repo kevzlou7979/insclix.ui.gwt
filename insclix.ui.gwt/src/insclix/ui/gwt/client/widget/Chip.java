@@ -1,4 +1,4 @@
-package insclix.ui.gwt.client.ui;
+package insclix.ui.gwt.client.widget;
 
 import gwt.material.design.client.custom.HasIcons;
 import gwt.material.design.client.custom.HasImage;

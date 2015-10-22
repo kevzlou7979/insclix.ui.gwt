@@ -1,4 +1,4 @@
-package insclix.ui.gwt.client.ui;
+package insclix.ui.gwt.client.widget;
 
 import gwt.material.design.client.custom.HasWaves;
 import gwt.material.design.client.ui.MaterialCardImage;

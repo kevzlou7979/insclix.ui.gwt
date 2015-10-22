@@ -1,9 +1,9 @@
 package insclix.ui.gwt.client.demo;
 
 import gwt.material.design.client.custom.MaterialSuggestionOracle;
-import insclix.ui.gwt.client.ui.Autocomplete;
-import insclix.ui.gwt.client.ui.Button;
-import insclix.ui.gwt.client.ui.TextBox;
+import insclix.ui.gwt.client.widget.Autocomplete;
+import insclix.ui.gwt.client.widget.Button;
+import insclix.ui.gwt.client.widget.TextBox;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
