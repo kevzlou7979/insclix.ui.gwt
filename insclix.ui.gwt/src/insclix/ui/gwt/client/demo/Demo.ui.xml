@@ -3,7 +3,7 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
 	xmlns:m="urn:import:gwt.material.design.client.ui"
 	xmlns:p='urn:import:com.vaadin.polymer.paper.widget'
-	xmlns:i="urn:import:insclix.ui.gwt.client">
+	xmlns:i="urn:import:insclix.ui.gwt.client.ui">
 	<ui:style>
 	.container paper-button.colored {
 	   background: #4285f4;
@@ -66,5 +66,6 @@
             <p:PaperItem>Underline</p:PaperItem>
             <p:PaperItem>Strikethrough</p:PaperItem>
 		</p:PaperMenu>
+		
 	</g:HTMLPanel>
 </ui:UiBinder>

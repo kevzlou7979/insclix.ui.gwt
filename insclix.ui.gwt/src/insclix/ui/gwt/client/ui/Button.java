@@ -1,4 +1,4 @@
-package insclix.ui.gwt.client;
+package insclix.ui.gwt.client.ui;
 
 import gwt.material.design.client.custom.HasActivates;
 import gwt.material.design.client.custom.HasColors;
