@@ -1,13 +1,48 @@
+
 package insclix.ui.gwt.client.widget;
-import com.google.gwt.safehtml.shared.SafeHtml;
-import com.google.gwt.user.client.ui.HTMLPanel;
+import gwt.material.design.client.ui.MaterialSection;
 
-public class Section extends HTMLPanel{
+import java.util.Iterator;
 
-	public Section(SafeHtml safeHtml) {
-		super(safeHtml);
-		// TODO Auto-generated constructor stub
-		this.addStyleName("section");
+import com.google.gwt.user.client.ui.HasWidgets;
+import com.google.gwt.user.client.ui.IsWidget;
+import com.google.gwt.user.client.ui.Widget;
+
+public class Section implements IsWidget, HasWidgets{
+
+	private MaterialSection section;
+	
+	public Section() {
+		section = new MaterialSection();
+	}
+
+	@Override
+	public void add(Widget w) {
+		section.add(w);
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		section.clear();
+	}
+
+	@Override
+	public Iterator<Widget> iterator() {
+		// TODO Auto-generated method stub
+		return section.iterator();
+	}
+
+	@Override
+	public boolean remove(Widget w) {
+		// TODO Auto-generated method stub
+		return section.remove(w);
+	}
+
+	@Override
+	public Widget asWidget() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

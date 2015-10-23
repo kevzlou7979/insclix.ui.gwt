@@ -1,17 +1,20 @@
 package insclix.ui.gwt.client.widget;
 
+import java.util.Iterator;
+
 import gwt.material.design.client.custom.HasIcons;
 import gwt.material.design.client.custom.HasImage;
 import gwt.material.design.client.ui.MaterialChip;
 import gwt.material.design.client.ui.MaterialIcon;
 
 import com.google.gwt.resources.client.ImageResource;
+import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
 
-public class Chip implements HasImage, HasIcons, IsWidget{
+public class Chip implements HasImage, HasIcons, IsWidget, HasWidgets{
 
 	private MaterialChip chip;
 	
@@ -88,6 +91,30 @@ public class Chip implements HasImage, HasIcons, IsWidget{
 	public Widget asWidget() {
 		// TODO Auto-generated method stub
 		return chip;
+	}
+
+	@Override
+	public void add(Widget w) {
+		// TODO Auto-generated method stub
+		chip.add(w);
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		chip.clear();
+	}
+
+	@Override
+	public Iterator<Widget> iterator() {
+		// TODO Auto-generated method stub
+		return chip.iterator();
+	}
+
+	@Override
+	public boolean remove(Widget w) {
+		// TODO Auto-generated method stub
+		return chip.remove(w);
 	}
 	
 }

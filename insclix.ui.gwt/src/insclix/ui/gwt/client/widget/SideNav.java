@@ -1,12 +1,15 @@
 package insclix.ui.gwt.client.widget;
 
-import com.google.gwt.user.client.ui.IsWidget;
-import com.google.gwt.user.client.ui.Widget;
+import java.util.Iterator;
 
 import gwt.material.design.client.custom.HasWaves;
 import gwt.material.design.client.ui.MaterialSideNav;
 
-public class SideNav  implements IsWidget,HasWaves {
+import com.google.gwt.user.client.ui.HasWidgets;
+import com.google.gwt.user.client.ui.IsWidget;
+import com.google.gwt.user.client.ui.Widget;
+
+public class SideNav  implements IsWidget,HasWaves, HasWidgets {
  
 	private MaterialSideNav sideNav;
 	
@@ -41,4 +44,29 @@ public class SideNav  implements IsWidget,HasWaves {
 		// TODO Auto-generated method stub
 		return sideNav;
 	}
+
+	@Override
+	public void add(Widget w) {
+		// TODO Auto-generated method stub
+		sideNav.add(w);
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		sideNav.clear();
+	}
+
+	@Override
+	public Iterator<Widget> iterator() {
+		// TODO Auto-generated method stub
+		return sideNav.iterator();
+	}
+
+	@Override
+	public boolean remove(Widget w) {
+		// TODO Auto-generated method stub
+		return sideNav.remove(w);
+	}
+
 }

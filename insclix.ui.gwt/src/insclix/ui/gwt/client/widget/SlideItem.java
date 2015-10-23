@@ -1,9 +1,10 @@
 package insclix.ui.gwt.client.widget;
 import gwt.material.design.client.ui.MaterialSlideItem;
+
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public class SlideItem implements IsWidget {
+public class SlideItem implements IsWidget{
 
 	
 	private MaterialSlideItem slideItem;
@@ -21,8 +22,5 @@ public class SlideItem implements IsWidget {
 		// TODO Auto-generated method stub
 		return slideItem;
 	}
-
-	
-	
 	
 }

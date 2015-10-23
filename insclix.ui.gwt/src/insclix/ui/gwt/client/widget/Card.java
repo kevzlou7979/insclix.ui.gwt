@@ -1,13 +1,16 @@
 package insclix.ui.gwt.client.widget;
 
+import java.util.Iterator;
+
 import gwt.material.design.client.custom.HasColors;
 import gwt.material.design.client.custom.HasGrid;
 import gwt.material.design.client.ui.MaterialCard;
 
+import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public class Card implements IsWidget, HasColors, HasGrid{
+public class Card implements IsWidget, HasColors, HasGrid, HasWidgets{
 
 
 	private MaterialCard card;
@@ -40,6 +43,28 @@ public class Card implements IsWidget, HasColors, HasGrid{
 	public Widget asWidget() {
 		// TODO Auto-generated method stub
 		return card;
+	}
+
+	@Override
+	public void add(Widget w) {
+		card.add(w);
+	}
+
+	@Override
+	public void clear() {
+		card.clear();
+	}
+
+	@Override
+	public Iterator<Widget> iterator() {
+		// TODO Auto-generated method stub
+		return card.iterator();
+	}
+
+	@Override
+	public boolean remove(Widget w) {
+		// TODO Auto-generated method stub
+		return card.remove(w);
 	}
 
 }

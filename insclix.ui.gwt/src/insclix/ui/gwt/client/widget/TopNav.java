@@ -5,7 +5,7 @@ import gwt.material.design.client.ui.MaterialTopNav;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public class TopNav  implements IsWidget  {
+public class TopNav  implements IsWidget{
 	private MaterialTopNav topNav;
 	public TopNav(){
 		setTopNav(new MaterialTopNav());

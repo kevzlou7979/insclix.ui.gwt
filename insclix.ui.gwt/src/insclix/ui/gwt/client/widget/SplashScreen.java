@@ -4,7 +4,7 @@ import gwt.material.design.client.ui.MaterialSplashScreen;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public class SplashScreen  implements IsWidget {
+public class SplashScreen  implements IsWidget{
 
 	private MaterialSplashScreen splashScreen;
 	public SplashScreen(){

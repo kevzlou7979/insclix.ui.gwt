@@ -1,9 +1,10 @@
 package insclix.ui.gwt.client.widget;
 import gwt.material.design.client.ui.MaterialTabs;
+
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public class Tabs  implements IsWidget {
+public class Tabs  implements IsWidget{
 	
 	private MaterialTabs tabs;
 	public Tabs(){

@@ -2,6 +2,7 @@ package insclix.ui.gwt.client.widget;
 import gwt.material.design.client.custom.HasError;
 import gwt.material.design.client.custom.HasGrid;
 import gwt.material.design.client.ui.MaterialTextArea;
+
 import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.HasChangeHandlers;
 import com.google.gwt.event.dom.client.HasKeyDownHandlers;
